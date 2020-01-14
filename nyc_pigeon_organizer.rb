@@ -19,6 +19,7 @@ def nyc_pigeon_organizer(data)
       info.each do |abj,name|
         if name.include?(name_list[index])
           pigeon_list[name_list[index]][demo].push(abj.to_s)
+          pigeon_list[name_list[index]][demo].uniq
         end
       end
     end

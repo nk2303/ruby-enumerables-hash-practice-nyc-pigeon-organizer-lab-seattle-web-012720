@@ -1,5 +1,5 @@
 def nyc_pigeon_organizer(data)
-  list = []
+ list = []
   data[:color].each{ |name| list.push(name) }
   name_list = []
   list.length.times do |block|
@@ -18,8 +18,9 @@ def nyc_pigeon_organizer(data)
     data.each do |demo, info|
       info.each do |abj,name|
         if name.include?(name_list[index])
-          pigeon_list[name_list[index]][demo].push(abj.to_s)
-          pigeon_list[name_list[index]][demo].uniq
+          if !(pigeon_list[name_list[index]][demo].include?(abj.to_s))
+            pigeon_list[name_list[index]][demo].push(abj.to_s)
+          end
         end
       end
     end

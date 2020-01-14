@@ -2,6 +2,7 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   pigeon_list = {}
   name = []
-  data.
+  
+  data[:color]
   return pigeon_list
 end

@@ -13,6 +13,15 @@ def nyc_pigeon_organizer(data)
     key = name_list[names]
     pigeon_list[key] = {:color=>[],:gender=>[],:lives=>[]}
   end
-
+  puts name_list
+  name_list.length.times do |index|
+    data.each do |demo, info|
+      info.each do |abj,name|
+        if name.include?(name_list[index])
+          pigeon_list[name_list[index]][demo].push(abj.to_s)
+        end
+      end
+    end
+  end
   return pigeon_list
 end
